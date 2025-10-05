@@ -1,0 +1,24 @@
+
+
+
+
+request--
+
+(.venv) pnijhawa@pnijhawa-mn4370 chatGPT_from_scratch % curl https://api.anthropic.com/v1/messages \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: $ANTHROPIC_API_KEY" \
+  -H "anthropic-version: 2023-06-01" \
+  -d '{
+    "model": "claude-sonnet-4-5",
+    "max_tokens": 1000,
+    "messages": [
+      {
+        "role": "user",
+        "content": "What should I search for to find the latest developments in renewable energy?"
+      }
+    ]
+  }'
+
+
+respose--
+{"id":"msg_01RsuTpP9vgY5hXErYg9EpnF","type":"message","role":"assistant","model":"claude-sonnet-4-5-20250929","content":[{"type":"text","text":"Here are effective search strategies for finding the latest renewable energy developments:\n\n## Specific Search Terms\n- \"renewable energy 2024\" or \"2025\"\n- \"solar energy breakthrough\"\n- \"wind power innovations\"\n- \"battery storage technology\"\n- \"green hydrogen developments\"\n- \"offshore wind projects\"\n\n## Recommended Sources\n- **News Sites**: Reuters Energy, Bloomberg Green, Canary Media\n- **Research**: Google Scholar, ScienceDirect (filter by recent dates)\n- **Industry Publications**: PV Magazine, Recharge News, Renewable Energy World\n- **Government/Organizations**: IEA (International Energy Agency), IRENA reports\n\n## Advanced Search Tips\n- Use date filters (past month/year)\n- Add terms like \"breakthrough,\" \"record,\" \"new,\" \"announced\"\n- Follow specific technologies you're interested in (perovskite solar, floating wind, etc.)\n- Set up Google Alerts for ongoing updates\n\n## Social Media\n- Follow researchers and companies on LinkedIn/Twitter\n- Check hashtags: #RenewableEnergy #CleanTech #EnergyTransition\n\nWhat aspect of renewable energy interests you most? I can suggest more targeted searches."}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":21,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":268,"service_tier":"standard"}}%  
