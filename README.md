@@ -1,12 +1,39 @@
 # chatGPT_from_scratch
-## Given a model API what does it take to develop a user application around it.
 
-We will need a dummy use case for which we are starting with an ai-tutor. I feel that the techniques we would be using and learning are generalised and whatever use case we have should not change that much. 
+## Overview
+This project demonstrates how to build a robust chat application on top of a raw LLM API (Anthropic Claude). It explores concepts like context engineering, token compaction, and prompt caching.
 
+## Features
+- **CLI Chat Interface:** Interactive terminal-based chat.
+- **Context Management:** Automatically estimates tokens and compacts older conversation history to stay within context limits.
+- **Session Persistence:** Save and resume chat sessions.
+- **Streaming:** Real-time text streaming from the API.
 
-We will be starting with implementing context engineering techniques like:  
-1.) compaction  
-2.) note-taking  
-3.) multi-agent architecture  
-4.) prompt caching  
+## Setup
 
+1. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Set API Key:**
+   Export your Anthropic API key as an environment variable:
+   ```bash
+   export ANTHROPIC_API_KEY='your-api-key-here'
+   ```
+
+## Usage
+
+**Run the CLI:**
+```bash
+python main.py
+```
+
+**Commands:**
+- Type your message and press Enter to chat.
+- `/save`: Save the current session to the `data/` directory.
+- `/new`: Start a fresh conversation.
+- `/quit`: Exit the application.
+
+## Development Journey
+See `journey_so_far.md` for the log of our learning process and experiments.
